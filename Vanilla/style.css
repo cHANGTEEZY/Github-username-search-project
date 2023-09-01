@@ -1,0 +1,195 @@
+/* importing fonts from google */
+
+@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500&family=Poppins:wght@300;400;500;700&family=Roboto:wght@100;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=JetBrains+Mono:wght@500&family=Poppins:wght@300;400;500;700&family=Roboto:wght@100;500;700;900&display=swap");
+
+/* removing the default styling from the browser */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: var(--secondary-color);
+  /* background-image: url(/background.jpg); */
+}
+
+/* custom variables for the project */
+:root {
+  /* fonts */
+  --primary-font: IBM Plex Mono, "san-serif";
+  --secondary-font: JetBrains Mono, "san-serif";
+  /* colors */
+  --default-color: #151414;
+  --null-color: #aca5a5;
+  --clear-color: #ffffff;
+  --main-color: #70737a;
+  --secondary-color: #6d7079;
+  --hover-color: #4b5163;
+}
+
+header {
+  display: flex;
+  background-color: var(--default-color);
+  height: 6rem;
+  box-shadow: 0px 0px 200px black;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  margin-right: 20px;
+  font-size: 3rem;
+  cursor: pointer;
+}
+h1 {
+  /* padding-top: 0.7rem; */
+  text-align: center;
+  flex-grow: 1;
+  margin: 0;
+  font-family: var(--primary-font);
+  font-size: 3rem;
+  color: var(--null-color);
+}
+.search-section {
+  margin-top: 2rem;
+  text-align: center;
+}
+input {
+  width: 19rem;
+  margin-top: 1.0234rem;
+  text-indent: 2rem;
+  text-align: start;
+  border-radius: 20rem;
+  height: 3em;
+  color: var(--default-color);
+  background-color: var(--null-color);
+  font-family: var(--primary-font);
+  font-weight: 600;
+  border: none;
+  box-shadow: -7px 2px 8px black;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background-color: var(--main-color);
+  padding: 0.6rem 0.6rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  width: 3rem;
+}
+
+#search {
+  margin-left: 0.8rem;
+  border: none;
+  color: var(--default-color);
+  background-color: var(--null-color);
+  font-weight: 900;
+  box-shadow: -7px 2px 8px black;
+}
+#search:hover {
+  background-color: var(--hover-color);
+  transition: all ease 0.4s;
+}
+#clear {
+  margin-left: 0.3rem;
+  border: none;
+  color: var(--default-color);
+  background-color: var(--null-color);
+  font-weight: 600;
+  box-shadow: -7px 2px 8px black;
+}
+#clear:hover {
+  background-color: var(--hover-color);
+  transition: all ease 0.4s;
+}
+
+/* need to add border shadow */
+#result {
+  display: none; /* Initially we dont want any styling to appear 
+                    when no information is available */
+  margin-top: 10rem;
+  padding: 10px;
+  border: none;
+  border-radius: 2rem;
+  text-align: center;
+  font-family: var(--secondary-font);
+  align-items: center;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#result img {
+  border-radius: 50%;
+  height: 17rem;
+  box-shadow: -9px 11px 12px 10px rgb(59, 59, 59);
+}
+#result p {
+  font-size: 0.9rem;
+}
+#result h2 {
+  margin-top: 2rem;
+}
+
+/* footer section  */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  height: 3rem;
+  background-color: var(--default-color);
+  color: var(--null-color);
+}
+
+footer p {
+  font-family: var(--secondary-font);
+}
+
+/* media queries for different screen sizes */
+
+@media (max-width: 800px) {
+  .logo {
+    display: none;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 600px) {
+  input {
+    width: 10rem;
+    text-indent: 0.6rem;
+    box-shadow: -7px 2px 8px black;
+  }
+  h1 {
+    font-size: 1.7 rem;
+  }
+  input::placeholder {
+    font-size: 0.6rem;
+  }
+  #result img {
+    height: 10rem;
+  }
+  #result p {
+    font-size: 0.7rem;
+  }
+  #result h2 {
+    font-size: 0.9rem;
+  }
+  footer {
+    font-size: 0.7rem;
+  }
+}

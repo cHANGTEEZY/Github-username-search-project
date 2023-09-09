@@ -1,0 +1,62 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: IBM Plex Mono;
+  /* background-image: url(/Bootstrap/assets/moon.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center; */
+  color: black;
+  background-color: rgb(68, 64, 77);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: transparent;
+}
+.nav-link {
+  color: black;
+}
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100vh - 300px);
+}
+
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+#username {
+  width: 400px;
+}
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+#result {
+  width: 100%;
+}
+i {
+  font-size: 40px;
+}
+
+@media screen and (min-width: 768px) {
+  #username {
+    width: 500px;
+  }
+}
